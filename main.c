@@ -22,15 +22,12 @@ int main() {
             }
         }
         if (should_add == 1) {
+            if (idx != 0) {
+                printf(":");
+            }
             entries[idx] = entry;
+            printf("%s", entries[idx]);
             ++idx;
-        }
-    }
-    for (int i = 0; i < PATH_SIZE; ++i) {
-        if (strcmp(entries[i], "\0") == 0) break;
-        printf("%s", entries[i]);
-        if (strcmp(entries[i + 1], "\0") != 0) {
-            printf(":");
         }
     }
     return 0;
